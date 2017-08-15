@@ -24,6 +24,10 @@ public class VictoriaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_victoria);
 
         ImageView imageView = (ImageView) findViewById(R.id.imagenvictoria);
+        //esta sentencia condicional a continuación es incorrecta, puesto que la clase AnimationDrawable
+        //está soportada desde la versión 1; por lo cual, la animación que consiste en una rotacin de foto
+        //sería visible en cualquier dispositivo, carenciendo de sentido este if
+        //  LO MISMO PARA DERROTA ACTIVITY: SOBRA
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1){
             imageView.setBackgroundResource(R.drawable.progress_animation_gameover2);
             AnimationDrawable progressAnimation = (AnimationDrawable) imageView.getBackground();
